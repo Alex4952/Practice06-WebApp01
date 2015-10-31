@@ -36,5 +36,15 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	
+	<!-- 웹통신을 위해 ios9 부터는 https 만 가능하도록 변경되어서 수정 필요 -->
+	<!-- From here -->
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<!-- to here -->
+	
 </dict>
 </plist>
