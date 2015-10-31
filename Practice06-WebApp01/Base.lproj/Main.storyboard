@@ -17,14 +17,41 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4ji-qB-2Gh">
-                                <rect key="frame" x="0.0" y="40" width="375" height="627"/>
+                                <rect key="frame" x="0.0" y="40" width="375" height="583"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="m18-t8-hUm">
+                                <rect key="frame" x="169" y="309" width="37" height="37"/>
+                                <color key="color" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gPh-lc-klH">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem image="arrow_left.png" id="uFu-dz-33S">
+                                        <connections>
+                                            <action selector="back:" destination="BYZ-38-t0r" id="w8q-hr-zyJ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="24" style="plain" systemItem="fixedSpace" id="kIa-Fd-ObL"/>
+                                    <barButtonItem image="arrow_right.png" id="h4y-SD-HCt">
+                                        <connections>
+                                            <action selector="forward:" destination="BYZ-38-t0r" id="8cg-Zb-Rv2"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="8iZ-y2-Rcn"/>
+                                    <barButtonItem image="reload.png" id="IyR-r6-hnf">
+                                        <connections>
+                                            <action selector="reload:" destination="BYZ-38-t0r" id="H6H-4n-6rS"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="spinner" destination="m18-t8-hUm" id="uV3-iO-fSG"/>
                         <outlet property="wv" destination="4ji-qB-2Gh" id="fbp-Ft-nw5"/>
                     </connections>
                 </viewController>
@@ -33,4 +60,9 @@
             <point key="canvasLocation" x="564.5" y="456.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="arrow_left.png" width="24" height="24"/>
+        <image name="arrow_right.png" width="24" height="24"/>
+        <image name="reload.png" width="24" height="24"/>
+    </resources>
 </document>
