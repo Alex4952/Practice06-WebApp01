@@ -83,6 +83,7 @@ class ViewController: UIViewController, UIWebViewDelegate {
 	
 	func webViewDidStartLoad(webView: UIWebView) {
 		self.spinner.startAnimating()
+		self.wv.stringByEvaluatingJavaScriptFromString("alert('자바스크립트호출')")
 	}
 	
 	@IBAction func back(sender: AnyObject) {
